@@ -1,10 +1,21 @@
 import { FC } from 'react'
-import { Pane, Heading } from 'evergreen-ui';
+import { Avatar, Heading, Pane } from 'evergreen-ui';
+import { GiHamburgerMenu } from 'react-icons/gi'
 
-const Navbar: FC = () => {
+interface openProps {
+    openShow: () => void
+}
+const Navbar: FC<openProps> = ({ openShow }) => {
+
+
     return (
-        <Pane display="flex" padding={16} background="tint2" borderRadius={3}>
-            <Heading size={600}>My App</Heading>
+        <Pane display="flex" alignItems='flex-start' justifyContent='space-between' padding={16} background="white" borderRadius={3} borderBottom='1px solid black' width='100%'>
+            {/* <IconButton icon="menu" appearance="default" onClick={() => setIsSideSheetOpen(true)} /> */}
+            <GiHamburgerMenu onClick={openShow} style={{ cursor: 'pointer', fontSize: '2rem', color: 'black' }} />
+            <Heading size={600} marginX={50} fontSize={25}>MOVIESIMDB</Heading>
+            <Pane display='flex' alignItems='center' justifyContent='space-between'>
+                <Avatar name='Fafiyebi Oluwapelumi' size={40} />
+            </Pane>
         </Pane>
     )
 }

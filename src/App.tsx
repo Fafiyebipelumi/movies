@@ -1,19 +1,30 @@
 import Navbar from "./components/Navbar";
-import { Pane, Heading, Paragraph } from 'evergreen-ui';
+import { Pane } from 'evergreen-ui';
 import SideNavbar from "./components/SideNavbar";
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Movies from "./pages/Movies";
 
 
 function App() {
+  const [isShown, setIsShown] = useState<boolean>(false)
+  const closeShow = () => {
+    setIsShown(false)
+  }
+  const openShow = () => {
+    setIsShown(true)
+  }
 
   return (
     <Pane>
-      <Navbar />
+      <Navbar openShow={openShow} />
       <Pane display="flex">
-        <SideNavbar />
+        <SideNavbar isShown={isShown} closeShow={closeShow} />
         <Pane flex="1" padding={16}>
           {/* Main content goes here */}
-          <Heading size={600}>Main Content</Heading>
-          <Paragraph>This is the main content area.</Paragraph>
+          <Routes>
+            <Route path='/' element={<Movies />} />
+          </Routes>
         </Pane>
       </Pane>
     </Pane>
