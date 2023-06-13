@@ -4,6 +4,7 @@ import SideNavbar from "./components/SideNavbar";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Movies from "./pages/Movies";
+import MovieDetails from "./pages/MovieDetails";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           {/* Main content goes here */}
           <Routes>
             <Route path='/' element={<Movies />} />
+            <Route path='/movie:id' element={<MovieDetails />} />
           </Routes>
         </Pane>
       </Pane>

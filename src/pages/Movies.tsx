@@ -28,6 +28,7 @@ const Movies: FC = () => {
                 setIsLoading(false)
             } catch (error) {
                 console.error(error)
+                setError('Error')
                 setIsLoading(false)
             }
         }
