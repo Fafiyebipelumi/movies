@@ -1,5 +1,5 @@
 import { FC, Fragment } from 'react'
-import { SideSheet, Paragraph } from 'evergreen-ui';
+import { SideSheet, Paragraph, Heading } from 'evergreen-ui';
 // import { dashboard } from '@fortawesome/free-solid-svg-icons';
 
 interface showProps {
@@ -16,6 +16,7 @@ const SideNavbar: FC<showProps> = ({ isShown, closeShow }) => {
                 onCloseComplete={closeShow}
             >
                 <Paragraph margin={40}>Basic Example and It's good to use Side Sheet</Paragraph>
+                <Heading>This is a side sheet</Heading>
             </SideSheet>
             {/* <Button onClick={openShow}>Show Basic Side Sheet</Button> */}
         </Fragment>
