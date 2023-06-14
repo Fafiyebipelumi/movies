@@ -1,7 +1,7 @@
 import { Heading, Image, Pane } from 'evergreen-ui'
 import { FC } from 'react'
-import { MoviesProps } from '../interfaces/Movies.interface'
 import { Link } from 'react-router-dom'
+import { MoviesProps } from '../interfaces/Movies.interface'
 
 const Movie: FC<MoviesProps> = ({ movies }) => {
     return (
