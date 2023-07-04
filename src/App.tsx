@@ -24,7 +24,7 @@ function App() {
         <Pane flex="1" padding={16}>
           {/* Main content goes here */}
           <Routes>
-            <Route path=':id/movie' element={<MovieDetails />} />
+            <Route path=':idd' element={<MovieDetails />} />
             <Route path='/' element={<Movies />} />
           </Routes>
         </Pane>

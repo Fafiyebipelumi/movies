@@ -8,7 +8,7 @@ const Movie: FC<MoviesProps> = ({ movies }) => {
         <Pane display='flex' flexWrap='wrap' width='100%' alignItems='center' justifyContent='center'>
             {movies.map(movie => (
                 <Pane key={movie.id} display='flex' flexWrap='wrap' width='100%' alignItems='center' justifyContent='center' flex={2} marginX={20}>
-                    <Link to={`${movie.id}/movie`} style={{ textDecoration: 'none' }}>
+                    <Link to={`${movie.id}`} style={{ textDecoration: 'none' }}>
                         <Image src={movie.image.url} alt='movie-img' width={200} height={150} />
                         <Pane>
                             <Heading>{movie.title}</Heading>
